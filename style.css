@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+i, svg{
+    pointer-events: none;
+}
+
+.kick-pad, .snare-pad, .hihat-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.kick-pad{
+    background-color: rgb(36, 210, 210);
+    border-radius: 5px;
+}
+
+.snare-pad{
+    background-color: rgb(110, 56, 204);
+    border-radius: 5px;    
+}
+
+.hihat-pad{
+    background-color: rgb(138, 18, 56);
+    border-radius: 5px;
+}
+
+.kick-pad.active{
+    background-color: rgb(0, 255, 255);
+    box-shadow: 2px 2px 2px rgb(0, 255, 255);
+}
+
+.snare-pad.active{
+    background-color: rgb(93, 0, 255);
+    box-shadow: 2px 2px 2px rgb(93, 0, 255);
+}
+
+.hihat-pad.active{
+    background-color: rgb(255, 0, 81);
+    box-shadow: 2px 2px 2px rgb(255, 0, 81);
+}
+
+.sequecer{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kick-track, .snare-track, .hihat-track{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.kick, .snare, .hihat{
+    display: flex;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.controls button{
+    padding: 1rem;
+    border: none;
+    background: rgb(183, 159, 219);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+.pad{
+    transition: all 0.5 ease;
+}
+
+.play{
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: rgb(76, 194, 52);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.play.active{
+    background: rgb(218, 24, 85);
+}
+
+.mute.active{
+    background: rgb(218, 24, 85);
+}
+
+select{
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.tempo{
+    margin: 3rem;
+    width: 30%;
+}
+
+.tempo-slider{
+    padding: 0.2rem;
+    appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(142, 53, 53);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.tempo p{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+@keyframes playTrack{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
